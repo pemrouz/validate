@@ -1,5 +1,5 @@
 {
-  "name": "@components/validate",
+  "name": "@pemrouz/validate",
   "version": "0.0.1",
   "main": "dist/resources",
   "author": "Pedram Emrouznejad (https://github.com/pemrouz)",
