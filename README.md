@@ -4,10 +4,8 @@
 
 Validates a component. Sets `is-invalid` when invoked, `is-interacted` on blur and an error message.
 
-<br>
 ### [Usage](https://github.com/pemrouz/vanilla/#using)
 
-<br>
 ### API
 
 **`validation = { pattern, message }`**
