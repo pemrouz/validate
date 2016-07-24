@@ -1,6 +1,6 @@
 {
   "name": "@pemrouz/validate",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/resources",
   "author": "Pedram Emrouznejad (https://github.com/pemrouz)",
   "license": "pemrouz.mit-license.org",
