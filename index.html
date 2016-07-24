@@ -1,0 +1,26 @@
+<body>
+  <h1>d3-chosen</h1>
+  <summary>Simple form controls for choosing things</summary>
+  <lookup-single   id="lookups"></lookup-multiple>
+  <lookup-multiple id="lookupm"></lookup-multiple>
+  <select-single   id="selects"></select-multiple>
+  <select-multiple id="selectm"></select-multiple>
+</body>
+<script src="https://rawgithub.com/rijs/minimal/master/dist/ripple.min.js"></script>
+<script src="dist/client.js" charset="utf-8"></script>
+<script>
+  ripple(chosen)
+
+  var options = [
+        { firstname: 'John', lastname: 'Smith' }
+      , { firstname: 'Jane', lastname: 'Smith' }
+      , { firstname: 'Jack', lastname: 'Smith' }
+      ]
+
+  lookups.state = { options: options, val: val }
+  lookups.draw()
+    
+  function val(d) {
+    return d.firstname + ' ' + d.lastname
+  }
+</script>
