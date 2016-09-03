@@ -1,4 +1,4 @@
-:host(.is-interacted.is-invalid) .input {
+:host(.is-interacted.is-invalid) .textfield {
   border-color: rgb(150, 30, 30);
   background: rgb(255,210,210); }
 

@@ -5,18 +5,20 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = validate;
-function validate(_ref) {
+function validate(node, _ref) {
   var _ref$value = _ref.value;
   var value = _ref$value === undefined ? '' : _ref$value;
   var validation = _ref.validation;
   var pattern = validation.pattern;
   var message = validation.message;
   var interacted = validation.interacted;
-  var o = once(this);
+  var o = once(node);
 
-  o.on('blur.interacted', function (d) {
-    return o.draw(validation.interacted = true);
-  }).classed('is-interacted', interacted).classed('is-invalid', !(validation.valid = pattern.test ? pattern.test(value) : pattern.call(this, value)));
+  o.on('blur.interacted', function (d, i, el, e) {
+    console.log("d.focused", d.focused);
+    if (d && d.focused) return;
+    o.draw(validation.interacted = true);
+  }).classed('is-interacted', interacted).classed('is-invalid', !(validation.valid = pattern.test ? pattern.test(value) : pattern.call(node, value)));
 
   o('.invalid-message', message).text(str);
 }
@@ -24,7 +26,7 @@ function validate(_ref) {
 module.exports = {
     "validate.css": {
         "name": "validate.css",
-        "body": ":host(.is-interacted.is-invalid) .input {\r\n  border-color: rgb(150, 30, 30);\r\n  background: rgb(255,210,210); }\r\n\r\n.invalid-message {\r\n  opacity: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: calc(100% + 10px);\r\n  text-align: center;\r\n  background-color: #ffe39a;\r\n  color: black;\r\n  font-size: 0.8em;\r\n  padding: 7px;\r\n  z-index: 1000;\r\n  border-radius: 3px;\r\n  border: 1px solid #ceb77d;\r\n  pointer-events: none;\r\n  transition: opacity 100ms; }\r\n\r\n:host(.is-focused.is-interacted.is-invalid) .invalid-message {\r\n  opacity: 1; }\r\n\r\n.invalid-message::before {\r\n  content: '';\r\n  position: absolute;\r\n  display: block;\r\n  width: 0;\r\n  height: 0;\r\n  top: -20px;\r\n  left: calc(50% - 10px);\r\n  border: 10px solid transparent;\r\n  border-bottom-color: #ffe399; }"
+        "body": ":host(.is-interacted.is-invalid) .textfield {\r\n  border-color: rgb(150, 30, 30);\r\n  background: rgb(255,210,210); }\r\n\r\n.invalid-message {\r\n  opacity: 0;\r\n  position: absolute;\r\n  width: 100%;\r\n  top: calc(100% + 10px);\r\n  text-align: center;\r\n  background-color: #ffe39a;\r\n  color: black;\r\n  font-size: 0.8em;\r\n  padding: 7px;\r\n  z-index: 1000;\r\n  border-radius: 3px;\r\n  border: 1px solid #ceb77d;\r\n  pointer-events: none;\r\n  transition: opacity 100ms; }\r\n\r\n:host(.is-focused.is-interacted.is-invalid) .invalid-message {\r\n  opacity: 1; }\r\n\r\n.invalid-message::before {\r\n  content: '';\r\n  position: absolute;\r\n  display: block;\r\n  width: 0;\r\n  height: 0;\r\n  top: -20px;\r\n  left: calc(50% - 10px);\r\n  border: 10px solid transparent;\r\n  border-bottom-color: #ffe399; }"
     },
     "validate": {
         "name": "validate",
