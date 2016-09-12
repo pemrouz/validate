@@ -26,13 +26,14 @@
     "babel-cli": "*",
     "babel-preset-es2015": "*",
     "babelify": "*",
-    "popper": "*",
-    "browserify": "*",
     "browserenv": "*",
-    "tap": "*",
-    "utilise": "*",
+    "browserify": "*",
     "cssscope": "*",
-    "utilise.filify": "*",
-    "rijs.export": "*"
+    "popper": "*",
+    "rijs.export": "*",
+    "tap": "*",
+    "uglifyjs": "^2.4.10",
+    "utilise": "*",
+    "utilise.filify": "*"
   }
 }
