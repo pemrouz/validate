@@ -22,7 +22,7 @@ t.test('basic output', t => {
           }
         }
 
-  validate.call(div, state)
+  validate(div, state)
 
   t.equal(state.validation.valid, false, 'sets state.valid')
   t.equal(div.className, 'is-invalid', 'sets is-invalid')
