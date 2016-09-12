@@ -34,7 +34,7 @@ _tap2.default.test('basic output', function (t) {
     }
   };
 
-  _validate2.default.call(div, state);
+  (0, _validate2.default)(div, state);
 
   t.equal(state.validation.valid, false, 'sets state.valid');
   t.equal(div.className, 'is-invalid', 'sets is-invalid');
