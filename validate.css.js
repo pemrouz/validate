@@ -1,3 +1,4 @@
+module.exports = `
 :host(.is-interacted.is-invalid) .textfield {
   border-color: rgb(150, 30, 30);
   background: rgb(255,210,210); }
@@ -31,3 +32,4 @@
   left: calc(50% - 10px);
   border: 10px solid transparent;
   border-bottom-color: #ffe399; }
+`
