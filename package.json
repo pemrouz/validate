@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@compone/class": "^1.1.1",
-    "@compone/define": "^1.2.1",
+    "@compone/define": "^1.2.2",
     "@compone/style": "^1.0.1",
     "utilise": "^2.3.3"
   },
